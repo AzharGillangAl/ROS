@@ -1,0 +1,13 @@
+The Arduino File inside ino directory
+The Python Scripts inside scripts directory
+The Launch file inside launch directory
+
+how to work:
+1. Upload the arduino programs into different arduino (in this case use 2 arduino)
+2. Edit the .launch file to configure the Serial port of the arduino (ttyACM* or ttyUSB*)
+3. go to catkin_ws, and run catkin_make commands
+4. run file by:
+     roslaunch practice_launch test_launch.launch
+
+the file will generate new topic /random_number and /random_number1, you can check the random value from each topic by using rostopic echo <topic>.
+from the py file itself will show the random number from /random_number topic.
